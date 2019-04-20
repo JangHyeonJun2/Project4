@@ -24,17 +24,17 @@ import java.util.List;
 import java.util.Set;
 
 @Controller
-@RequestMapping(value = "/boards")
-public class BoardController {
-    private BoardService boardService;
-    private CommentService commentService;
-    private FileUtil fileUtil;
+    @RequestMapping(value = "/boards")
+    public class BoardController {
+        private BoardService boardService;
+        private CommentService commentService;
+        private FileUtil fileUtil;
 
-    public BoardController(BoardService boardService, CommentService commentService, FileUtil fileUtil) {
-        this.boardService = boardService;
-        this.commentService = commentService;
-        this.fileUtil = fileUtil;
-    }
+        public BoardController(BoardService boardService, CommentService commentService, FileUtil fileUtil) {
+            this.boardService = boardService;
+            this.commentService = commentService;
+            this.fileUtil = fileUtil;
+        }
 
     @GetMapping("/write")
     public String writeform(HttpSession httpSession) {
